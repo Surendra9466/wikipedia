@@ -1,6 +1,6 @@
 function apiCall(){
     var value = document.getElementById("searchBox").value;
-
+    console.log(value);
     fetch(`https://en.wikipedia.org/w/api.php?&origin=*&format=json&action=opensearch&search=${value}`)
     .then(response => response.json())
     .then(result => {
@@ -17,3 +17,5 @@ function apiCall(){
     })
 
 }
+
+setInterval(apiCall,200);
