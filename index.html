@@ -15,11 +15,12 @@
         <div class="main">
             <div class="box">
                 <h1>Wikipedia Search</h1>
-                <input type="text" id="searchBox" value="" />
-                <button type="button" onclick="apiCall()">Button</button>
+                <input type="text" id="searchBox" value=""   oninput="apiCall()"/>
+                <!-- <button type="button" >Button</button> -->
             </div>
         </div>
-        <div>
+        <div class="resultBox">
+            <h2>Search Result..........</h2>
             <ul id="result">
                 
             </ul>

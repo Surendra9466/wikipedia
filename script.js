@@ -11,8 +11,8 @@ function apiCall(){
         let count = 0; 
         let innerContent = "";
         arrayLink.forEach(element => {
-            //<div class="card"><div class="container"><p>Surendra Singh</p></div></div>
-            innerContent+=`<li><a href=${element} target="_blank">${arrayTitle[count++]}</a></li>`
+            //<div class="card"> <div class="container"><p>Architect & Engineer</p></div></div>
+            innerContent+=`<li><div class="card"> <div class="container"><a href=${element} target="_blank">${arrayTitle[count++]}</a></div></div></li>`
         
         });
 
