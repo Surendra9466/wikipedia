@@ -7,10 +7,12 @@ function apiCall(){
     .then(result => {
 
         let arrayLink = result[3];
+        let arrayTitle = result[1];
+        let count = 0; 
         let innerContent = "";
         arrayLink.forEach(element => {
             //<div class="card"><div class="container"><p>Surendra Singh</p></div></div>
-            innerContent+=`<li><a href=${element} target="_blank">${element}</a></li>`
+            innerContent+=`<li><a href=${element} target="_blank">${arrayTitle[count++]}</a></li>`
         
         });
 
@@ -18,6 +20,9 @@ function apiCall(){
     })
 }
 
-document.getElementById("searchBox").oninput = ()=>{
-    apiCall();
-}
+// setInterval(apiCall, 500);
+
+
+// document.getElementById("searchBox").oninput = ()=>{
+//     apiCall();
+// }
